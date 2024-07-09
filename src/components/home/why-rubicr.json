@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_why_rubicrs",
+  "info": {
+    "displayName": "why rubicr",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.card"
+    }
+  }
+}

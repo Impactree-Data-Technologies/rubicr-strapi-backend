@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_do_its",
+  "info": {
+    "displayName": "Do it",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "do_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.us-card"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_home_use_cases",
+  "info": {
+    "displayName": "use case"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "case_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.us-card"
+    }
+  }
+}

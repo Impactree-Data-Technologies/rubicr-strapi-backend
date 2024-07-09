@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_simplifieds",
+  "info": {
+    "displayName": "simplified",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.features"
+    }
+  }
+}

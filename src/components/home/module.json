@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_home_modules",
+  "info": {
+    "displayName": "Module",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subdescription": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "Logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.logo"
+    },
+    "whyrubicr": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.why-rubicr"
+    },
+    "why_us": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.why-us"
+    },
+    "do_it": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.do-it"
+    },
+    "use_case": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.use-case"
+    },
+    "Modules": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.module"
+    }
+  }
+}
