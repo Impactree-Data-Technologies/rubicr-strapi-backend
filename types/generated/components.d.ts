@@ -43,7 +43,7 @@ export interface ElementUsCard extends Schema.Component {
   };
   attributes: {
     heading: Attribute.String;
-    description: Attribute.String;
+    description: Attribute.Text;
     link: Attribute.Text;
   };
 }
