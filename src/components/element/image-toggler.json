@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_element_image_togglers",
+  "info": {
+    "displayName": "image_toggler"
+  },
+  "options": {},
+  "attributes": {
+    "with_rubicr": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "without_rubicr": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

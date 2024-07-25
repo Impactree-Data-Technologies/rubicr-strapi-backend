@@ -54,6 +54,16 @@
       "type": "component",
       "repeatable": false,
       "component": "home.module"
+    },
+    "image_toggler": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.image-toggler"
+    },
+    "use_case_image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.use-case-image"
     }
   }
 }

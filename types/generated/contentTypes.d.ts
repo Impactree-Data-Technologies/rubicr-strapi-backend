@@ -417,6 +417,8 @@ export interface ApiHomeHome extends Schema.SingleType {
     do_it: Attribute.Component<'home.do-it'>;
     use_case: Attribute.Component<'home.use-case'>;
     Modules: Attribute.Component<'home.module'>;
+    image_toggler: Attribute.Component<'element.image-toggler'>;
+    use_case_image: Attribute.Component<'home.use-case-image'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

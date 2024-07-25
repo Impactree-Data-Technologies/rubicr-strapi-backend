@@ -24,14 +24,27 @@ export interface ElementFeatures extends Schema.Component {
   };
 }
 
+export interface ElementImageToggler extends Schema.Component {
+  collectionName: 'components_element_image_togglers';
+  info: {
+    displayName: 'image_toggler';
+  };
+  attributes: {
+    with_rubicr: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    without_rubicr: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface ElementUsCard extends Schema.Component {
   collectionName: 'components_element_us_cards';
   info: {
     displayName: 'us_card';
+    description: '';
   };
   attributes: {
     heading: Attribute.String;
     description: Attribute.String;
+    link: Attribute.Text;
   };
 }
 
@@ -84,6 +97,16 @@ export interface HomeSimplified extends Schema.Component {
   };
 }
 
+export interface HomeUseCaseImage extends Schema.Component {
+  collectionName: 'components_home_use_case_images';
+  info: {
+    displayName: 'use_case_image';
+  };
+  attributes: {
+    case_image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+  };
+}
+
 export interface HomeUseCase extends Schema.Component {
   collectionName: 'components_home_use_cases';
   info: {
@@ -126,11 +149,13 @@ declare module '@strapi/types' {
     export interface Components {
       'element.card': ElementCard;
       'element.features': ElementFeatures;
+      'element.image-toggler': ElementImageToggler;
       'element.us-card': ElementUsCard;
       'home.do-it': HomeDoIt;
       'home.logo': HomeLogo;
       'home.module': HomeModule;
       'home.simplified': HomeSimplified;
+      'home.use-case-image': HomeUseCaseImage;
       'home.use-case': HomeUseCase;
       'home.why-rubicr': HomeWhyRubicr;
       'home.why-us': HomeWhyUs;
