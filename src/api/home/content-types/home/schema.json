@@ -64,6 +64,16 @@
       "type": "component",
       "repeatable": false,
       "component": "home.use-case-image"
+    },
+    "Impact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.impact"
+    },
+    "six_step": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.six-step"
     }
   }
 }

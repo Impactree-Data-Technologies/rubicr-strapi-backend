@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_six_steps",
+  "info": {
+    "displayName": "six_step",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "step_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.step-card"
+    }
+  }
+}

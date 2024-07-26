@@ -35,6 +35,17 @@ export interface ElementImageToggler extends Schema.Component {
   };
 }
 
+export interface ElementStepCard extends Schema.Component {
+  collectionName: 'components_element_step_cards';
+  info: {
+    displayName: 'step_card';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface ElementUsCard extends Schema.Component {
   collectionName: 'components_element_us_cards';
   info: {
@@ -57,6 +68,18 @@ export interface HomeDoIt extends Schema.Component {
   attributes: {
     title: Attribute.String;
     do_card: Attribute.Component<'element.us-card', true>;
+  };
+}
+
+export interface HomeImpact extends Schema.Component {
+  collectionName: 'components_home_impacts';
+  info: {
+    displayName: 'Impact';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    impact_card: Attribute.Component<'element.card', true>;
   };
 }
 
@@ -94,6 +117,18 @@ export interface HomeSimplified extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     feature: Attribute.Component<'element.features', true>;
+  };
+}
+
+export interface HomeSixStep extends Schema.Component {
+  collectionName: 'components_home_six_steps';
+  info: {
+    displayName: 'six_step';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    step_card: Attribute.Component<'element.step-card', true>;
   };
 }
 
@@ -150,11 +185,14 @@ declare module '@strapi/types' {
       'element.card': ElementCard;
       'element.features': ElementFeatures;
       'element.image-toggler': ElementImageToggler;
+      'element.step-card': ElementStepCard;
       'element.us-card': ElementUsCard;
       'home.do-it': HomeDoIt;
+      'home.impact': HomeImpact;
       'home.logo': HomeLogo;
       'home.module': HomeModule;
       'home.simplified': HomeSimplified;
+      'home.six-step': HomeSixStep;
       'home.use-case-image': HomeUseCaseImage;
       'home.use-case': HomeUseCase;
       'home.why-rubicr': HomeWhyRubicr;
