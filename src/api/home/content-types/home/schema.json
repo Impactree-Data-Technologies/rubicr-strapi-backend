@@ -74,6 +74,9 @@
       "type": "component",
       "repeatable": false,
       "component": "home.six-step"
+    },
+    "Bot_Press": {
+      "type": "blocks"
     }
   }
 }

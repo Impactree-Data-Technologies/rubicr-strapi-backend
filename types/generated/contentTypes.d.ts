@@ -788,6 +788,41 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiEnquiryEnquiry extends Schema.CollectionType {
+  collectionName: 'enquiries';
+  info: {
+    singularName: 'enquiry';
+    pluralName: 'enquiries';
+    displayName: 'Enquiry';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    firstName: Attribute.String;
+    lastName: Attribute.String;
+    email: Attribute.String;
+    phone: Attribute.String;
+    interests: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::enquiry.enquiry',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::enquiry.enquiry',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFeedbackFeedback extends Schema.CollectionType {
   collectionName: 'feedbacks';
   info: {
@@ -847,6 +882,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     use_case_image: Attribute.Component<'home.use-case-image'>;
     Impact: Attribute.Component<'home.impact', true>;
     six_step: Attribute.Component<'home.six-step'>;
+    Bot_Press: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -928,6 +964,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::feedback.feedback': ApiFeedbackFeedback;
       'api::home.home': ApiHomeHome;
       'api::post.post': ApiPostPost;
