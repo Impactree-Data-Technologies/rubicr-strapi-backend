@@ -13,6 +13,19 @@ export interface ElementCard extends Schema.Component {
   };
 }
 
+export interface ElementCaseCard extends Schema.Component {
+  collectionName: 'components_element_case_cards';
+  info: {
+    displayName: 'case_card';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    link: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface ElementFeatures extends Schema.Component {
   collectionName: 'components_element_features';
   info: {
@@ -146,10 +159,11 @@ export interface HomeUseCase extends Schema.Component {
   collectionName: 'components_home_use_cases';
   info: {
     displayName: 'use case';
+    description: '';
   };
   attributes: {
     heading: Attribute.String;
-    case_card: Attribute.Component<'element.us-card', true>;
+    case_card: Attribute.Component<'element.case-card', true>;
   };
 }
 
@@ -183,6 +197,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'element.card': ElementCard;
+      'element.case-card': ElementCaseCard;
       'element.features': ElementFeatures;
       'element.image-toggler': ElementImageToggler;
       'element.step-card': ElementStepCard;
